@@ -15,7 +15,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /var/lib/docker/volumes/frigate/config/config.yml:/config/config.yml
       - /var/lib/docker/volumes/frigate/media:/media/frigate
-      - /var/lib/docker/volumes/frigate/_data:/data
       - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
         target: /tmp/cache
         tmpfs:
