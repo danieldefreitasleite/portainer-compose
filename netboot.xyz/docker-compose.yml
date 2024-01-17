@@ -1,8 +1,8 @@
 version: "2.1"
 services:
-  netbootxyz:
+  netboot.xyz:
     image: lscr.io/linuxserver/netbootxyz:latest
-    container_name: netbootxyz
+    container_name: netboot.xyz
     environment:
       - PUID=1000
       - PGID=1000
