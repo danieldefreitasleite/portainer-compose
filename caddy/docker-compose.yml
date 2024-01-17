@@ -13,8 +13,8 @@ services:
     volumes:
       - /var/lib/docker/volumes/Caddyfile:/etc/caddy/Caddyfile
       - /var/lib/docker/volumes/site:/srv
-      - caddy/_data:/data
-      - caddy/config:/config
+      - ./_data:/data
+      - ./config:/config
 volumes:
   caddy:
     external: true
