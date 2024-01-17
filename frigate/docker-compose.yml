@@ -26,3 +26,5 @@ services:
       - "8555:8555/udp" # WebRTC over udp
     environment:
       FRIGATE_RTSP_PASSWORD: "password"
+volumes:
+  frigate
