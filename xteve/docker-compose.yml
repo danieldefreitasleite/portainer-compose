@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  xteve:
+    image: taylorbourne/xteve_lazystream
+    restart: unless-stopped
+    ports:
+      - "34400:34400"
+    volumes:
+      - /var/lib/docker/volumes/xteve/data/.xteve:/xteve:rw
+      - /var/lib/docker/volumes/xteve/config/:/config:rw
+      - /var/lib/docker/volumes/xteve/guide2go/:/guide2go:rw
+      - /var/lib/docker/volumes/xteve/playlists/:/playlists:rw
+      - /tmp/xteve/:/tmp/xteve:rw
+    env_file: .env
