@@ -3,12 +3,6 @@ services:
   frigate:
     container_name: frigate
     privileged: true # this may not be necessary for all setups
-    restart: unless-stopped
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Sao_Paulo
-      FRIGATE_RTSP_PASSWORD: "password"
     image: ghcr.io/blakeblackshear/frigate:stable
     cap_add:
       - CAP_PERFMON
@@ -31,6 +25,12 @@ services:
       - "8554:8554" # RTSP feeds
       - "8555:8555/tcp" # WebRTC over tcp
       - "8555:8555/udp" # WebRTC over udp
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+      FRIGATE_RTSP_PASSWORD: "password"
+    restart: unless-stopped
 volumes:
   frigate:
     external: true
