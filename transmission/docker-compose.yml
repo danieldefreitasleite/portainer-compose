@@ -15,7 +15,7 @@ services:
       #- PEERPORT=peerport #optional
       #- HOST_WHITELIST=dnsname list #optional
     volumes:
-      - config:/config
+      - /var/lib/docker/volumes/transmission/config:/config
       - /srv/transmission/downloads:/downloads
       - /srv/transmission/watch:/watch
       - /srv/transmission/incomplete:/incomplete
