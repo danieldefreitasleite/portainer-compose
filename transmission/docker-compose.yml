@@ -1,0 +1,28 @@
+---
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+      - TRANSMISSION_WEB_HOME=/config/flood_for_transmission/
+      #- TRANSMISSION_WEB_HOME=/config/Transmissionic/web/
+      #- USER=root #optional
+      #- PASS=Danielleite13@ #optional
+      #- WHITELIST=iplist #optional
+      #- PEERPORT=peerport #optional
+      #- HOST_WHITELIST=dnsname list #optional
+    volumes:
+      - config:/config
+      - /srv/transmission/downloads:/downloads
+      - /srv/transmission/watch:/watch
+      - /srv/transmission/incomplete:/incomplete
+    ports:
+      - 9091:9091
+      - 59999:59999
+      - 59999:59999/udp
+    restart: unless-stopped
+volumes:
+  config:
