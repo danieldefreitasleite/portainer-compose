@@ -15,6 +15,10 @@ services:
       - /var/lib/docker/volumes/caddy/site:/srv
       - /var/lib/docker/volumes/caddy/_data:/data
       - /var/lib/docker/volumes/caddy/config:/config
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
 volumes:
   caddy:
     external: true
