@@ -26,10 +26,7 @@ services:
       - "8555:8555/tcp" # WebRTC over tcp
       - "8555:8555/udp" # WebRTC over udp
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Sao_Paulo
-      - FRIGATE_RTSP_PASSWORD: "password"
+      FRIGATE_RTSP_PASSWORD: "password"
     restart: unless-stopped
 volumes:
   frigate:
