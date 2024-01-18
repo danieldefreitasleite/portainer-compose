@@ -7,7 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Sao_Paulo
-      - TRANSMISSION_WEB_HOME=/config/flood_for_transmission/flood-for-transmission/
+      - TRANSMISSION_WEB_HOME=./config/flood_for_transmission/flood-for-transmission/
       #- TRANSMISSION_WEB_HOME=/config/transmissionic/web/
       #- USER=root #optional
       #- PASS=Danielleite13@ #optional
