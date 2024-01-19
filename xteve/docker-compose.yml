@@ -9,9 +9,9 @@ services:
       - "34400:34400"
     volumes:
       - /var/lib/docker/volumes/xteve/:/root/./xteve:rw
-      - /var/lib/docker/volumes/xteve/data/.xteve:/xteve:rw
+      #- /var/lib/docker/volumes/xteve/data/.xteve:/xteve:rw
       - /var/lib/docker/volumes/xteve/config/:/config:rw
-      - /var/lib/docker/volumes/xteve/guide2go/:/guide2go:rw
-      - /var/lib/docker/volumes/xteve/playlists/:/playlists:rw
+      #- /var/lib/docker/volumes/xteve/guide2go/:/guide2go:rw
+      #- /var/lib/docker/volumes/xteve/playlists/:/playlists:rw
       - /tmp/xteve/:/tmp/xteve:rw
     restart: unless-stopped
