@@ -8,6 +8,6 @@ services:
     volumes:
       - /var/lib/docker/volumes/homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
-    enviroment:
+    environment:
       PUID: 1000
       PGID: 1000
