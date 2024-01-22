@@ -15,3 +15,6 @@ services:
       #- /var/lib/docker/volumes/xteve/playlists/:/playlists:rw
       - /tmp/xteve/:/tmp/xteve:rw
     restart: unless-stopped
+volumes:
+  xteve:
+    external: true
