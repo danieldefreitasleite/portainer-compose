@@ -5,7 +5,7 @@ services:
     container_name: homepage
     #env_file: /var/lib/docker/volumes/homepage/.env
     ports:
-      - 3100:3100
+      - 3100:3000
     volumes:
       - /var/lib/docker/volumes/homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
