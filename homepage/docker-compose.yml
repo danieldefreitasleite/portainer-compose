@@ -3,7 +3,7 @@ services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
-    env_file: .env
+    env_file: /var/lib/docker/volumes/homepage/.env
     ports:
       - 3100:3100
     volumes:
