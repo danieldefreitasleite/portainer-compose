@@ -4,6 +4,8 @@ services:
   calibre-web:
     image: lscr.io/linuxserver/calibre-web:latest
     container_name: calibre-web
+    security_opt:
+      - seccomp=unconfined
     environment:
       - PUID=1000
       - PGID=1000
