@@ -3,15 +3,15 @@ services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
-    env_file: /var/lib/docker/volumes/homepage/.env
+    #env_file: /var/lib/docker/volumes/homepage/.env
     ports:
       - 3100:3100
     volumes:
       - /var/lib/docker/volumes/homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      #PUID: 1000
-      #PGID: 1000
+      PUID: 1000
+      PGID: 1000
       #It will be read from .env file
-      PUID: $PUID
-      PGID: $PGID
+      #PUID: $PUID
+      #PGID: $PGID
