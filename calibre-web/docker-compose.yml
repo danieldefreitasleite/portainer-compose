@@ -16,8 +16,8 @@ services:
       - /var/lib/docker/volumes/calibre-web/config:/config
       #- /var/lib/docker/volumes/calibre-web/metadata.db:/config/metadata.db
       #NAS-Proxmox /srv/media/livros
-      - /srv/livros:/books
-      - /srv/livros/metadata.db:/books/metadata.db
+      - /srv/livros/calibre:/books
+      - /srv/livros/calibre/metadata.db:/books/metadata.db
     ports:
       - 8083:8083
     restart: unless-stopped
