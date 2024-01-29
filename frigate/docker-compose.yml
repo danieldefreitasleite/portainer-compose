@@ -6,6 +6,14 @@ services:
     image: ghcr.io/blakeblackshear/frigate:stable
     cap_add:
       - CAP_PERFMON
+    deploy:    # <------------- Add this section
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0'] # this is only needed when using multiple GPUs
+              count: 1 # number of GPUs
+              capabilities: [gpu]    
     shm_size: "300mb" #Per frigate installation guide for 8 Hd cameras 127mb would be fine...  update for your cameras based on calculation above
     devices:
       #- /dev/bus/usb:/dev/bus/usb # passes the USB Coral, needs to be modified for other versions
