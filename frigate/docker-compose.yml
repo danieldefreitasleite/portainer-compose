@@ -3,7 +3,7 @@ services:
   frigate:
     container_name: frigate
     privileged: true # this may not be necessary for all setups
-    image: ghcr.io/blakeblackshear/frigate:latest
+    image: ghcr.io/blakeblackshear/frigate:stable
     cap_add:
       - CAP_PERFMON
     deploy:    # <------------- Add this section
