@@ -4,7 +4,7 @@ services:
     container_name: frigate
     privileged: true # this may not be necessary for all setups
     #image: ghcr.io/blakeblackshear/frigate:stable
-    image: ghcr.io/blakeblackshear/frigate:master-01e2d20
+    image: ghcr.io/blakeblackshear/frigate:stable
     cap_add:
       - CAP_PERFMON
     shm_size: "300mb" #Per frigate installation guide for 8 Hd cameras 127mb would be fine...  update for your cameras based on calculation above
