@@ -37,4 +37,6 @@ services:
 
 volumes:
   omada:
-    external: true
+    data:
+      external: true
+    logs:
