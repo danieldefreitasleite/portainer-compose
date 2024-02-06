@@ -32,8 +32,7 @@ services:
       - SSL_KEY_NAME=tls.key
       - TZ=America/Sao_Paulo
     volumes:
-      - /var/lib/docker/volumes/omada/data:/opt/tplink/EAPController/data
-      
+      - /var/lib/docker/volumes/omada/data:/opt/tplink/EAPController/data      
       - /var/lib/docker/volumes/omada/logs:/opt/tplink/EAPController/logs
 volumes:
   omada:
