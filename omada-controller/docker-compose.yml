@@ -35,5 +35,5 @@ services:
       - var/lib/docker/volumes/omada/data:/opt/tplink/EAPController/data
       - var/lib/docker/volumes/omada/logs:/opt/tplink/EAPController/logs
 volumes:
-  omada/data:
+  omada:
     external: true
