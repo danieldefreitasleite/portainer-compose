@@ -9,6 +9,7 @@ services:
       - TZ=America/Sao_Paulo
       # To get the latest version of menu comment the following line
       #- MENU_VERSION=1.9.9 #optional
+      - WEB_APP_PORT=3000
       - PORT_RANGE=30000:30010 #optional
       - SUBFOLDER=/ #optional
     volumes:
