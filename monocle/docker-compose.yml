@@ -7,5 +7,5 @@ services:
     image: monoclecam/monocle-gateway
     restart: always
     volumes:
-      - /etc/monocle:/etc/monocle
+      - /var/lib/docker/volumes/monocle:/etc/monocle
     network_mode: host
