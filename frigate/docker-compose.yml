@@ -25,8 +25,8 @@ services:
     ports:
       - "5000:5000"
       - "8554:8554" # RTSP feeds
-      # Disabled for test porpuses - reference: https://bloggeek.me/why-you-should-prefer-udp-over-tcp-for-your-webrtc-sessions/
-      #- "8555:8555/tcp" # WebRTC over tcp
+      # Didn't work - reference: https://bloggeek.me/why-you-should-prefer-udp-over-tcp-for-your-webrtc-sessions/
+      - "8555:8555/tcp" # WebRTC over tcp
       - "8555:8555/udp" # WebRTC over udp
     environment:
       FRIGATE_RTSP_USER: "onvif"
