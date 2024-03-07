@@ -26,8 +26,8 @@ services:
       - "5000:5000"
       - "8554:8554" # RTSP feeds
       # Didn't work - reference: https://bloggeek.me/why-you-should-prefer-udp-over-tcp-for-your-webrtc-sessions/
-      - "8555:8555/tcp" # WebRTC over tcp
-      - "8555:8555/udp" # WebRTC over udp
+      - "8550:8555/tcp" # WebRTC over tcp
+      - "8550:8555/udp" # WebRTC over udp
     environment:
       FRIGATE_RTSP_USER: "onvif"
       FRIGATE_RTSP_PASSWORD: "D13h22m21"
